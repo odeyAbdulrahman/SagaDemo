@@ -38,3 +38,4 @@ D:\Programing\git\api\SagaDemo\InventoryService\obj\Debug\net9.0\refint\Inventor
 D:\Programing\git\api\SagaDemo\InventoryService\obj\Debug\net9.0\InventoryService.pdb
 D:\Programing\git\api\SagaDemo\InventoryService\obj\Debug\net9.0\InventoryService.genruntimeconfig.cache
 D:\Programing\git\api\SagaDemo\InventoryService\obj\Debug\net9.0\ref\InventoryService.dll
+D:\Programing\git\api\SagaDemo\InventoryService\obj\Debug\net9.0\InventoryService.sourcelink.json

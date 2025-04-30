@@ -1,5 +1,8 @@
 ﻿using MassTransit;
+using MassTransit.Transports;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace SagaOrchestrator
 {
@@ -10,6 +13,8 @@ namespace SagaOrchestrator
             Console.WriteLine("Hello, World!");
 
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddSingleton<IOrderStateRepository, InMemoryOrderStateRepository>();
 
             builder.Services.AddMassTransit(x =>
             {
@@ -35,7 +40,9 @@ namespace SagaOrchestrator
                 });
             });
 
+
             var app = builder.Build();
+
             app.Run();
         }
     }

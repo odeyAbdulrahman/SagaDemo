@@ -22,3 +22,4 @@ D:\Programing\git\api\SagaDemo\SagaOrchestrator\obj\Debug\net9.0\refint\SagaOrch
 D:\Programing\git\api\SagaDemo\SagaOrchestrator\obj\Debug\net9.0\SagaOrchestrator.pdb
 D:\Programing\git\api\SagaDemo\SagaOrchestrator\obj\Debug\net9.0\SagaOrchestrator.genruntimeconfig.cache
 D:\Programing\git\api\SagaDemo\SagaOrchestrator\obj\Debug\net9.0\ref\SagaOrchestrator.dll
+D:\Programing\git\api\SagaDemo\SagaOrchestrator\obj\Debug\net9.0\SagaOrchestrator.sourcelink.json

@@ -38,3 +38,4 @@ D:\Programing\git\api\SagaDemo\PaymentService\obj\Debug\net9.0\refint\PaymentSer
 D:\Programing\git\api\SagaDemo\PaymentService\obj\Debug\net9.0\PaymentService.pdb
 D:\Programing\git\api\SagaDemo\PaymentService\obj\Debug\net9.0\PaymentService.genruntimeconfig.cache
 D:\Programing\git\api\SagaDemo\PaymentService\obj\Debug\net9.0\ref\PaymentService.dll
+D:\Programing\git\api\SagaDemo\PaymentService\obj\Debug\net9.0\PaymentService.sourcelink.json

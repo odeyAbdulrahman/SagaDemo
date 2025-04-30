@@ -38,3 +38,9 @@ D:\Programing\git\api\SagaDemo\OrderService\obj\Debug\net9.0\refint\OrderService
 D:\Programing\git\api\SagaDemo\OrderService\obj\Debug\net9.0\OrderService.pdb
 D:\Programing\git\api\SagaDemo\OrderService\obj\Debug\net9.0\OrderService.genruntimeconfig.cache
 D:\Programing\git\api\SagaDemo\OrderService\obj\Debug\net9.0\ref\OrderService.dll
+D:\Programing\git\api\SagaDemo\OrderService\bin\Debug\net9.0\SagaOrchestrator.deps.json
+D:\Programing\git\api\SagaDemo\OrderService\bin\Debug\net9.0\SagaOrchestrator.runtimeconfig.json
+D:\Programing\git\api\SagaDemo\OrderService\bin\Debug\net9.0\SagaOrchestrator.exe
+D:\Programing\git\api\SagaDemo\OrderService\bin\Debug\net9.0\SagaOrchestrator.dll
+D:\Programing\git\api\SagaDemo\OrderService\bin\Debug\net9.0\SagaOrchestrator.pdb
+D:\Programing\git\api\SagaDemo\OrderService\obj\Debug\net9.0\OrderService.sourcelink.json

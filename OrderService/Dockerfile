@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 COPY ["OrderService/OrderService.csproj", "OrderService/"]
-COPY ["SharedContracts/SharedContracts.csproj", "SharedContracts/"]
+COPY ["SagaOrchestrator/SagaOrchestrator.csproj", "SagaOrchestrator/"]
 RUN dotnet restore "OrderService/OrderService.csproj"
 
 COPY . .
