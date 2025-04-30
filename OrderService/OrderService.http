@@ -11,11 +11,3 @@ Content-Type: application/json
  "Quantity": 1,  
  "Price": 100.0  
 }
-
-### Get order status by ID  
-GET {{OrderService_HostAddress}}/orders/{{orderId}}  
-Content-Type: application/json  
-
-### Get all orders  
-GET {{OrderService_HostAddress}}/orders/getAll  
-Content-Type: application/json

@@ -325,23 +325,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "SagaOrchestrator/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "MassTransit": "8.4.1-develop.2268",
-          "MassTransit.RabbitMQ": "8.4.1-develop.2268",
-          "Microsoft.AspNetCore.OpenApi": "9.0.4",
-          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
-          "SharedContracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SagaOrchestrator.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SagaOrchestrator.dll": {}
-        }
-      },
       "SharedContracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -933,11 +916,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "SagaOrchestrator/1.0.0": {
-      "type": "project",
-      "path": "../SagaOrchestrator/SagaOrchestrator.csproj",
-      "msbuildProject": "../SagaOrchestrator/SagaOrchestrator.csproj"
-    },
     "SharedContracts/1.0.0": {
       "type": "project",
       "path": "../SharedContracts/SharedContracts.csproj",
@@ -950,7 +928,7 @@
       "MassTransit.RabbitMQ >= 8.4.1-develop.2268",
       "Microsoft.AspNetCore.OpenApi >= 9.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
-      "SagaOrchestrator >= 1.0.0"
+      "SharedContracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -987,8 +965,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Programing\\git\\api\\SagaDemo\\SagaOrchestrator\\SagaOrchestrator.csproj": {
-              "projectPath": "D:\\Programing\\git\\api\\SagaDemo\\SagaOrchestrator\\SagaOrchestrator.csproj"
+            "D:\\Programing\\git\\api\\SagaDemo\\SharedContracts\\SharedContracts.csproj": {
+              "projectPath": "D:\\Programing\\git\\api\\SagaDemo\\SharedContracts\\SharedContracts.csproj"
             }
           }
         }

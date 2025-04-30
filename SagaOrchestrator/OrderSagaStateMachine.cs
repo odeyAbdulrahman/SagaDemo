@@ -18,7 +18,7 @@ namespace SagaOrchestrator
         public Event<InventoryAllocated> InventoryAllocated { get; private set; } = default!;
         public Event<InventoryAllocationFailed> InventoryAllocationFailed { get; private set; } = default!;
 
-        public OrderSagaStateMachine(ILogger<OrderSagaStateMachine> logger, IOrderStateRepository repository)
+        public OrderSagaStateMachine(ILogger<OrderSagaStateMachine> logger)
         {
             // Initialize states
             InstanceState(x => x.CurrentState);
@@ -40,8 +40,6 @@ namespace SagaOrchestrator
                         context.Saga.Amount = context.Message.Amount;
                         context.Saga.Items = context.Message.Items;
                         context.Saga.SubmittedDate = DateTime.UtcNow;
-
-                        repository.SaveState(context.Saga);
                         logger.LogInformation("Order submitted: {OrderId}", context.Saga.OrderId);
                     })
                     .Publish(context => new ProcessPayment(
@@ -58,14 +56,6 @@ namespace SagaOrchestrator
                     .Then(context =>
                     {
                         context.Saga.PaymentTransactionId = context.Message.TransactionId;
-                        context.Saga.Steps.Add(new OrderProcessingStep(
-                    "PaymentProcessing",
-                    "Completed",
-                    DateTime.UtcNow,
-                    $"Transaction ID: {context.Message.TransactionId}"));
-                        context.Saga.LastUpdated = DateTime.UtcNow;
-
-                        repository.SaveState(context.Saga);
                         logger.LogInformation("Payment completed for {OrderId}", context.Saga.OrderId);
                     })
                     .Publish(context => new AllocateInventory(
@@ -77,14 +67,6 @@ namespace SagaOrchestrator
                     .Then(context =>
                     {
                         context.Saga.FailureReason = context.Message.Reason;
-                        context.Saga.Steps.Add(new OrderProcessingStep(
-                    "PaymentProcessing",
-                    "Failed",
-                    DateTime.UtcNow,
-                    context.Message.Reason));
-                        context.Saga.LastUpdated = DateTime.UtcNow;
-
-                        repository.SaveState(context.Saga);
                         logger.LogError("Payment failed for {OrderId}: {Reason}",
                             context.Saga.OrderId, context.Message.Reason);
                     })
@@ -95,17 +77,8 @@ namespace SagaOrchestrator
 
             During(Processing,
                 When(InventoryAllocated)
-                    .Then(context => {
-                        context.Saga.Steps.Add(new OrderProcessingStep(
-                        "InventoryAllocated",
-                        "Completed",
-                        DateTime.UtcNow,
-                        $"Order ID:{context.Saga.OrderId}"));
-                        context.Saga.LastUpdated = DateTime.UtcNow;
-
-                        repository.SaveState(context.Saga);
-                        logger.LogInformation("Inventory allocated for {OrderId}", context.Saga.OrderId);
-                        })
+                    .Then(context =>
+                        logger.LogInformation("Inventory allocated for {OrderId}", context.Saga.OrderId))
                     .Publish(context => new OrderSubmitted(
                         context.Saga.OrderId,
                         DateTime.UtcNow))
@@ -115,14 +88,6 @@ namespace SagaOrchestrator
                     .Then(context =>
                     {
                         context.Saga.FailureReason = context.Message.Reason;
-                        context.Saga.Steps.Add(new OrderProcessingStep(
-                    "PaymentProcessing",
-                    "Failed",
-                    DateTime.UtcNow,
-                    context.Message.Reason));
-                        context.Saga.LastUpdated = DateTime.UtcNow;
-
-                        repository.SaveState(context.Saga);
                         logger.LogError("Inventory allocation failed for {OrderId}: {Reason}",
                             context.Saga.OrderId, context.Message.Reason);
                     })

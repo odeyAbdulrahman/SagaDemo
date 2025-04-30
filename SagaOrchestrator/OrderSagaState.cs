@@ -14,14 +14,5 @@ namespace SagaOrchestrator
         public string? PaymentTransactionId { get; set; }
         public string? FailureReason { get; set; }
         public DateTime SubmittedDate { get; set; }
-
-        public List<OrderProcessingStep> Steps { get; set; } = new();
-        public DateTime? LastUpdated { get; set; }
     }
-
-    public record OrderProcessingStep(
-    string StepName,
-    string Status,
-    DateTime Timestamp,
-    string? Details = null);
 }
