@@ -1,0 +1,12 @@
+D:\Programing\git\api\SagaDemo\SharedContracts\bin\Debug\net9.0\SharedContracts.deps.json
+D:\Programing\git\api\SagaDemo\SharedContracts\bin\Debug\net9.0\SharedContracts.dll
+D:\Programing\git\api\SagaDemo\SharedContracts\bin\Debug\net9.0\SharedContracts.pdb
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.csproj.AssemblyReference.cache
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.AssemblyInfoInputs.cache
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.AssemblyInfo.cs
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.csproj.CoreCompileInputs.cache
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.dll
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\refint\SharedContracts.dll
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\SharedContracts.pdb
+D:\Programing\git\api\SagaDemo\SharedContracts\obj\Debug\net9.0\ref\SharedContracts.dll

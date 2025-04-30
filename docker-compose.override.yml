@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  sagaorchestrator:
+    container_name: sagaorchestrator
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "8001:80"
+    restart: unless-stopped
+
+  orderservice:
+    container_name: orderservice
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "8002:80"
+    restart: unless-stopped
+
+  paymentservice:
+    container_name: paymentservice
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_RUNNING_IN_CONTAINER: "true"
+      ASPNETCORE_URLS: http://+:80
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "8003:80"
+    restart: unless-stopped
+
+  inventoryservice:
+    container_name: inventoryservice
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "8004:80"
+    restart: unless-stopped

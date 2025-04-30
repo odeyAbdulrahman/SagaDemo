@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SagaOrchestrator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

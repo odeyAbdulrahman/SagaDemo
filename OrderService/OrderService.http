@@ -1,0 +1,13 @@
+@OrderService_HostAddress = http://localhost:5087
+
+###
+### Submit Order  
+POST {{OrderService_HostAddress}}/orders  
+Content-Type: application/json  
+
+{  
+ "OrderId": "12345",  
+ "ProductName": "Sample Product",  
+ "Quantity": 1,  
+ "Price": 100.0  
+}
